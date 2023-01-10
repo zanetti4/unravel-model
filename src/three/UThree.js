@@ -167,12 +167,11 @@ export default class UThree {
 		
 		var tween = new TWEEN.Tween(coords)
 			.to(toCoords, 1000)
-			// .easing(TWEEN.Easing.Linear.Out)
+			.easing(TWEEN.Easing.Linear.None)
 			.onUpdate(function(){
 				// Called after tween.js updates 'coords'.
 				mesh.position.set(coords.x, coords.y, coords.z);
 			})
 			.start();
-			//Uncaught TypeError: this._easingFunction is not a function
 	}
 }
